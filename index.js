@@ -1,6 +1,6 @@
-import openai from './config/open-ai.js';
-import readlineSync from 'readline-sync';
-import colors from 'colors';
+const openai =require( './config/open-ai.js');
+const readlineSync =require( 'readline-sync');
+const colors =require('colors') ;
 
 const filterKeywords = ['child immunization', 'vaccine schedule', 'vaccination for infants']; // Define filter keywords
 
