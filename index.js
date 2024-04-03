@@ -2,7 +2,24 @@ const openai =require( './config/open-ai.js');
 const readlineSync =require( 'readline-sync');
 const colors =require('colors') ;
 
-const filterKeywords = ['child immunization', 'vaccine schedule', 'vaccination for infants']; // Define filter keywords
+const filterKeywords =[
+  // Greetings
+  'hello', 'hi', 'hey', 'greetings', 'good', 'morning',
+  'good', 'afternoon', 'good', 'evening', 'how', 'are',
+  'you', 'what\'s', 'how\'s', 'it', 'going',
+  
+  // Child Immunization
+  'child', 'vaccinations', 'vaccine', 'schedule', 'immunization',
+  'shots', 'baby', 'vaccines', 'infant', 'immunization',
+  'vaccination', 'for', 'kids', 'vaccine', 'for', 'babies',
+  'immunization', 'for', 'children', 'vaccine', 'shots',
+  'vaccine', 'recommendations', 'immunization', 'guidelines',
+  'vaccine', 'side', 'effects', 'vaccine-preventable', 'diseases',
+  'child', 'vaccine', 'safety', 'vaccine', 'coverage',
+  'vaccine', 'information', 'vaccine', 'myths', 'immunization',
+  'records', 'vaccine', 'exemptions', 'catch-up', 'immunization',
+  'vaccine', 'education', 'school', 'immunization', 'requirements',
+]; 
 
 async function main() {
   console.log(colors.bold.green('Welcome to the Chatbot Program!'));
